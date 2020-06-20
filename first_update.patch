@@ -1,0 +1,13 @@
+Index: lib/person.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lib/person.py	(revision 94824cfe455371a18b30251449e7627e14792d35)
++++ lib/person.py	(date 1592675460427)
+@@ -1,4 +1,4 @@
+-#push
++#pus
+ ray = {
+     "name": "Ray",
+     "D": 0.3,
