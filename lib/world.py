@@ -1,3 +1,4 @@
+#push
 dungeon = {
     'ph_D': 1,
     'ph_I': 1,
