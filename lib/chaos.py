@@ -41,14 +41,16 @@ def simple_fire():
     c_blue = dist / 2  # найти центр тяжести
     c_green_red = np.sqrt(x3 * c_blue + x4 * ray["pos_y"])  # длина red + green
 
-    red = np.sqrt(x3 * enemy["pos_x"] + x4 * enemy["pos_y"])  # просчет позиции врага от краев треугольника
+    red_x = np.array([enemy["pos_x"], enemy["pos_y"]])
+    red_y = np.array([x3, x4])
+    red = np.linalg.norm(red_x - red_y)  # просчет позиции врага от краев треугольника
     green = np.sqrt(x3 * enemy["pos_x"] + (-x4) * enemy["pos_y"])
     blue = np.sqrt(np.power(enemy["pos_x"], 2) + np.power(enemy["pos_y"], 2))  # не точно
 
     per_red = int((red / c_blue) * 100)
     per_green = int((green / c_blue) * 100)
     per_blue = int((blue / c_blue) * 100)
-    print('R: ', per_red, '|', 'G: ', per_green, '|', 'B: ', per_blue, 'test: ', dist)
+    print('R: ', red, '|', 'G: ', per_green, '|', 'B: ', per_blue, 'test: ', dist)
 
     ax.plot([x3, enemy["pos_x"]], [x4, enemy["pos_y"]], color='red', label='RED')
     ax.plot([x3, enemy["pos_x"]], [-x4, enemy["pos_y"]], color='green', label='GREEN')
