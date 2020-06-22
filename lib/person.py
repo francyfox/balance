@@ -13,7 +13,7 @@ ray = {
 
 enemy = {
     "xp": 100,
-    "pos_x": 6,
-    "pos_y": 2
+    "pos_x": 8,
+    "pos_y": 4
 }
 
